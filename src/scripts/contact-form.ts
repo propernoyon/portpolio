@@ -19,32 +19,48 @@ function submitMSG(valid: boolean, msg: string): void {
   $('#msgSubmit').removeClass().addClass(msgClasses).text(msg);
 }
 
-function formSuccess(): void {
-  ($('#contactForm')[0] as HTMLFormElement).reset();
-  submitMSG(true, 'Message Submitted!');
+interface ContactResponse {
+  ok: boolean;
+  message: string;
 }
 
-function submitForm(): void {
-  // Initiate variables with form content
-  const name = String($('#name').val() ?? '');
-  const email = String($('#email').val() ?? '');
-  const msgSubject = String($('#msg_subject').val() ?? '');
-  const message = String($('#message').val() ?? '');
+function formSuccess(msg: string): void {
+  ($('#contactForm')[0] as HTMLFormElement).reset();
+  submitMSG(true, msg);
+}
 
-  $.ajax({
-    type: 'POST',
-    url: 'assets/php/form-process.php',
-    data:
-      'name=' + name + '&email=' + email + '&msg_subject=' + msgSubject + '&message=' + message,
-    success(text: string) {
-      if (text == 'success') {
-        formSuccess();
-      } else {
-        formError();
-        submitMSG(false, text);
-      }
-    },
-  });
+async function submitForm(): Promise<void> {
+  const $button = $('#submit');
+  const $loading = $('#formLoading');
+  $button.prop('disabled', true);
+  $loading.show();
+
+  try {
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: String($('#name').val() ?? ''),
+        email: String($('#email').val() ?? ''),
+        msg_subject: String($('#msg_subject').val() ?? ''),
+        message: String($('#message').val() ?? ''),
+        website: String($('#contactForm input[name="website"]').val() ?? ''),
+      }),
+    });
+    const result = (await res.json()) as ContactResponse;
+    if (result.ok) {
+      formSuccess(result.message);
+    } else {
+      formError();
+      submitMSG(false, result.message);
+    }
+  } catch {
+    formError();
+    submitMSG(false, 'Network error. Please try again.');
+  } finally {
+    $loading.hide();
+    $button.prop('disabled', false);
+  }
 }
 
 export function initContactForm(): void {
@@ -58,7 +74,7 @@ export function initContactForm(): void {
       } else {
         // everything looks good!
         event.preventDefault();
-        submitForm();
+        void submitForm();
       }
     });
 }
