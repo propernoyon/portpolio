@@ -15,7 +15,7 @@
 /* ...but keep a clear teal ring for keyboard (Tab) users. */
 .navbar a:focus-visible,
 .navbar .navbar-toggle:focus-visible {
-    outline: 2px solid #1bb1a1;
+    outline: 2px solid var(--accent);
     outline-offset: 4px;
     border-radius: 3px;
 }
@@ -37,13 +37,13 @@
     background-color: rgba(255, 255, 255, 0.15);
 }
 .navbar-default.small .navbar-toggle {
-    border-color: #d9e3e2;
+    border-color: var(--border);
 }
 .navbar-default.small .navbar-toggle .icon-bar {
-    background-color: #1bb1a1;
+    background-color: var(--accent-strong);
 }
 .navbar-default.small .navbar-toggle:hover {
-    background-color: #f1f7f6;
+    background-color: var(--accent-soft);
 }
 
 /* Mobile menu: solid white panel sized to its links, so it doesn't
@@ -55,12 +55,12 @@
         max-height: calc(100vh - 75px);
         margin: 0 -15px;
         padding: 6px 0 14px;
-        background-color: #fff;
-        border-top: 1px solid #eef3f2;
-        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+        background-color: var(--surface);
+        border-top: 1px solid var(--border);
+        box-shadow: var(--nav-shadow);
     }
     .navbar-fixed-top .navbar-collapse.collapsing {
-        background-color: #fff;
+        background-color: var(--surface);
     }
     .navbar-default .navbar-collapse .navbar-nav {
         float: none;
@@ -75,12 +75,12 @@
     .navbar-default .navbar-collapse .navbar-nav > li > a {
         display: block;
         padding: 13px 0;
-        color: #222;
+        color: var(--heading);
         font-size: 15px;
         text-align: center;
     }
     .navbar-default .navbar-collapse .navbar-nav > li > a:hover {
-        color: #1bb1a1;
-        background-color: #f4faf9;
+        color: var(--accent-strong);
+        background-color: var(--accent-soft);
     }
 }

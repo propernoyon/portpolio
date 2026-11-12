@@ -72,6 +72,17 @@
 
 
 
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#ffffff" />
+  <!-- Apply saved / device theme before the page paints (avoids a flash of the wrong colours) -->
+  <script>
+    (function () {
+      var t;
+      try { t = localStorage.getItem('theme'); } catch (e) {}
+      if (t !== 'light' && t !== 'dark') t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
   <!-- ========== CSS ========== -->
   <link rel="stylesheet" href="/css/animate.css" />
   <link rel="stylesheet" href="/css/site.css" />
@@ -93,6 +104,7 @@
   <link rel="icon" href="/img/favicon-32x32.png" type="image/x-icon">
   <link href="/css/jquerysctipttop.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="/css/style.css?v=2" />
+  <link rel="stylesheet" href="/css/theme.css" />
   <link rel="stylesheet" href="/css/work.css" />
   <link rel="stylesheet" href="/css/service.css" />
   <link rel="stylesheet" href="/css/navbar.css" />
@@ -157,6 +169,10 @@
             <!-- end col-md-8 -->
           </div>
           <!-- end row -->
+          <button type="button" class="theme-toggle" id="themeToggle" aria-label="Switch to dark theme" title="Switch to dark theme" aria-pressed="false">
+            <i class="fa fa-moon-o theme-icon-moon" aria-hidden="true"></i>
+            <i class="fa fa-sun-o theme-icon-sun" aria-hidden="true"></i>
+          </button>
         </div>
         <!-- end container-fluid -->
       </nav>

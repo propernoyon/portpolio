@@ -4,7 +4,7 @@
    ========================================================================= */
 
 #work {
-    background-color: #F3F3F3;
+    background-color: var(--bg-alt);
 }
 
 /* ---------- Filter buttons ---------- */
@@ -30,16 +30,17 @@
     font-weight: 600;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: #1bb1a1;
-    background: #fff;
-    border: 1px solid #1bb1a1;
+    color: var(--accent-strong);
+    background: var(--surface);
+    border: 1px solid var(--accent);
     border-radius: 30px;
     transition: background-color .25s, color .25s;
 }
 #work #filters li span:hover,
 #work #filters li span.active {
-    background: #1bb1a1;
-    color: #fff;
+    background: var(--accent-strong);
+    border-color: var(--accent-strong);
+    color: var(--on-accent);
 }
 
 /* ---------- Card grid ---------- */
@@ -64,15 +65,16 @@
 /* ---------- Card ---------- */
 #work .portfolio-wrapper {
     height: 100%;
-    background: #fff;
-    border-top: 3px solid #1bb1a1;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--accent);
     border-radius: 6px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    box-shadow: var(--shadow-sm);
     transition: transform .25s, box-shadow .25s;
 }
 #work .portfolio-wrapper:hover {
     transform: translateY(-4px);
-    box-shadow: 0 10px 24px rgba(27, 177, 161, 0.18);
+    box-shadow: var(--shadow-lg);
 }
 #work .text-box {
     padding: 26px 26px 28px;
@@ -87,8 +89,8 @@
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: #138a7d;
-    background: #d2efee;
+    color: var(--accent-strong);
+    background: var(--accent-soft);
     border-radius: 20px;
 }
 #work .text-box h4 {
@@ -97,14 +99,14 @@
     font-size: 17px;
     font-weight: 600;
     line-height: 1.4;
-    color: #222;
+    color: var(--heading);
 }
 #work .text-box p {
     margin: 0;
     font-size: 14px;
     line-height: 1.75;
     letter-spacing: .3px;
-    color: #626262;
+    color: var(--muted);
 }
 
 /* ---------- Responsive ---------- */

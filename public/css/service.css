@@ -15,7 +15,7 @@
     font-size: 15px;
     line-height: 1.85;
     letter-spacing: .3px;
-    color: #5D5D5D;
+    color: var(--text);
 }
 
 /* ---------- Card grid: 3 / 2 / 1 columns ---------- */
@@ -41,16 +41,16 @@
     height: 100%;
     margin: 0;
     padding: 30px 28px 32px;
-    background: #F7F9F9;
-    border: 1px solid #E6EEED;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
     border-radius: 8px;
     transition: transform .25s, box-shadow .25s, border-color .25s, background-color .25s;
 }
 #service .service-details:hover {
-    background: #fff;
-    border-color: #1bb1a1;
+    background: var(--surface);
+    border-color: var(--accent);
     transform: translateY(-4px);
-    box-shadow: 0 10px 24px rgba(27, 177, 161, 0.15);
+    box-shadow: var(--shadow-lg);
 }
 #service .service-icon {
     display: inline-block;
@@ -59,9 +59,10 @@
     font-size: 22px;
     line-height: 52px;
     text-align: center;
-    color: #fff;
-    background-color: #1bb1a1;
+    color: var(--on-accent);
+    background-color: var(--accent-strong);
     border-radius: 12px;
+    transition: transform .3s;
 }
 #service .service-details h3 {
     margin: 22px 0 12px;
@@ -70,12 +71,15 @@
     font-weight: 600;
     letter-spacing: .5px;
     line-height: 1.4;
-    color: #222;
+    color: var(--heading);
 }
 #service .underline-black {
     width: 40px;
     height: 2px;
-    background-color: #1bb1a1;
+    background-color: var(--accent);
+}
+#service .service-details:hover .service-icon {
+    transform: rotate(-8deg) scale(1.06);
 }
 #service .service-details:hover .underline-black {
     width: 70px;
@@ -85,10 +89,10 @@
     font-size: 14px;
     line-height: 1.75;
     letter-spacing: .2px;
-    color: #626262;
+    color: var(--muted);
 }
 #service .service-details p strong {
-    color: #3f3f3f;
+    color: var(--heading);
     font-weight: 600;
 }
 
