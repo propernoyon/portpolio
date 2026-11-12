@@ -76,7 +76,7 @@ export function initSite(): void {
   $(() => {
     $('#portfoliolist').mixItUp({
       selectors: { target: '.portfolio', filter: '.filter' },
-      load: { filter: '.web, .graphics, .development, .photography' },
+      load: { filter: 'all' },
     });
   });
 
