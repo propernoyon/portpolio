@@ -1,14 +1,16 @@
-// Entry point for the portfolio page. Runs in the same order the old
-// <script> tags did: wow-anim, contact form, main.js, ripple.js.
-// Each runs in isolation, like separate <script> tags, so one failing
-// doesn't stop the others.
+// Entry point for every page (home, about, services, projects).
+// Each feature looks for its own markup and does nothing when it is not on the page.
+// They run in isolation so one failing does not stop the others.
+import './styles/site.css';
 import { initTheme } from './scripts/theme';
-import { initWow } from './scripts/wow-anim';
+import { initHeader } from './scripts/header';
+import { initMotion } from './scripts/motion';
+import { initWorkFilter } from './scripts/work-filter';
 import { initContactForm } from './scripts/contact-form';
-import { initSite } from './scripts/site';
-import { initRipple } from './scripts/ripple';
 
-for (const init of [initTheme, initWow, initContactForm, initSite, initRipple]) {
+document.documentElement.classList.add('js');
+
+for (const init of [initTheme, initHeader, initMotion, initWorkFilter, initContactForm]) {
   try {
     init();
   } catch (err) {

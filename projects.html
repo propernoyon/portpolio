@@ -151,7 +151,7 @@
   </script>
 
   <meta name="color-scheme" content="light dark" />
-  <meta name="theme-color" content="#ffffff" />
+  <meta name="theme-color" content="#f4f6f8" />
   <script>
     (function () {
       var t;
@@ -160,64 +160,16 @@
       document.documentElement.setAttribute('data-theme', t);
     })();
   </script>
-  <link rel="stylesheet" href="/css/font-awesome.min.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat&amp;display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/assets/css/bootstrap.min.css" type="text/css" media="screen" />
   <link rel="icon" href="/img/favicon-32x32.png" type="image/png" sizes="32x32" />
-  <link rel="stylesheet" href="/css/style.css?v=3" />
-  <link rel="stylesheet" href="/css/theme.css?v=2" />
-  <link rel="stylesheet" href="/css/work.css?v=2" />
-  <link rel="stylesheet" href="/css/navbar.css" />
-  <link rel="stylesheet" href="/css/projects.css" />
+  <!-- Styles and fonts are bundled from /src/styles/site.css by Vite (see src/main.ts) -->
 </head>
 
-<body class="projects-body">
-  <a class="sr-only sr-only-focusable" href="#main">Skip to main content</a>
-  <header class="menubar">
-    <div class="menubar-content">
-      <nav class="navbar navbar-default navbar-fixed-top small" aria-label="Primary">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-2 col-sm-2">
-              <div class="site-title">
-                <p class="h3 site-name"><a href="/" aria-label="Md Noyon – home">MATC</a></p>
-              </div>
-            </div>
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-                aria-controls="bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span></button>
-            </div>
-            <div class="col-md-10 col-sm-10 navbar-style">
-              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                  <li><a href="/">Home</a></li>
-                  <li><a href="/#about">About</a></li>
-                  <li><a href="/#service">Service</a></li>
-                  <li><a href="/#work">Work</a></li>
-                  <li class="active"><a href="/projects" aria-current="page">Projects</a></li>
-                  <li><a href="/#contact">Contact</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <button type="button" class="theme-toggle" id="themeToggle" aria-label="Switch to dark theme" title="Switch to dark theme" aria-pressed="false">
-            <i class="fa fa-moon-o theme-icon-moon" aria-hidden="true"></i>
-            <i class="fa fa-sun-o theme-icon-sun" aria-hidden="true"></i>
-          </button>
-        </div>
-      </nav>
-    </div>
-  </header>
+<body>
+  <!--@header projects-->
 
-  <main class="projects-page" id="main">
-    <div class="projects-hero">
-      <div class="container">
+  <main id="main">
+    <section class="page-hero">
+      <div class="wrap">
         <nav aria-label="Breadcrumb">
           <ol class="crumbs">
             <li><a href="/">Home</a></li>
@@ -225,27 +177,34 @@
           </ol>
         </nav>
         <h1>Enterprise ERP Development – Selected Projects</h1>
-        <div class="underline"></div>
-        <p class="projects-intro">
+        <p class="page-intro">
           I'm Md Noyon (Toriqul Islam Noyon), a full-stack ERP developer. Between 2021 and 2026 I worked on
           enterprise resource planning systems for four manufacturing and industrial businesses. Each project
           below lists the client, my role, what I built and the technology behind it.
         </p>
-        <ul class="project-cards">
-          <li><a href="#starline-group"><strong>Starline Group</strong><span>2024–2026 · Manufacturing ERP</span><em>Eight integrated ERP modules for manufacturing and business operations.</em></a></li>
-          <li><a href="#primitek-group"><strong>Primitek Group</strong><span>2022–2024 · Manufacturing ERP</span><em>ERP solution development for non-woven bag manufacturing operations.</em></a></li>
-          <li><a href="#mep-group"><strong>MEP Group</strong><span>2023–2024 · ERP Solution Development</span><em>Partial ERP development and business process management.</em></a></li>
-          <li><a href="#techno-pc"><strong>Techno PC</strong><span>2021–2022 · Manufacturing ERP</span><em>ERP development for plastic bottle manufacturing operations.</em></a></li>
-        </ul>
       </div>
-    </div>
+    </section>
 
-    <div id="work" class="projects-detail">
-      <div class="container">
-        <article class="project" id="starline-group">
-          <p class="project-meta"><span class="project-num">01</span><span class="work-tag">Manufacturing ERP</span><span class="project-years">2024 – 2026</span></p>
-          <h2>Starline Group</h2>
-          <dl class="project-facts">
+    <div class="wrap doc">
+      <nav class="doc-index" aria-label="Projects">
+        <h2>Projects</h2>
+        <ul>
+          <li><a href="#starline-group">Starline Group<span>2024–2026</span></a></li>
+          <li><a href="#primitek-group">Primitek Group<span>2022–2024</span></a></li>
+          <li><a href="#mep-group">MEP Group<span>2023–2024</span></a></li>
+          <li><a href="#techno-pc">Techno PC<span>2021–2022</span></a></li>
+          <li><a href="#technical-expertise">Technical expertise</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <article class="entry" id="starline-group">
+          <div class="entry-head">
+            <h2>Starline Group</h2>
+            <p class="entry-years">2024–2026</p>
+          </div>
+          <dl class="fact-list">
+            <div><dt>Type</dt><dd>Manufacturing ERP</dd></div>
             <div><dt>Client</dt><dd>Starline Group</dd></div>
             <div><dt>Industry</dt><dd>Manufacturing &amp; industrial business</dd></div>
             <div><dt>My role</dt><dd>Full-stack ERP developer</dd></div>
@@ -254,7 +213,7 @@
           <p>I developed a comprehensive Enterprise Resource Planning (ERP) system for Starline Group to manage its manufacturing and business operations from one centralized platform.</p>
           <p>The system brings several business departments together, so day-to-day operations, business data and workflows are handled in a single place.</p>
           <h3>Key modules developed</h3>
-          <ul class="project-modules">
+          <ul class="ticks cols-2">
             <li>Sales Management</li>
             <li>Purchase Management</li>
             <li>Inventory Management</li>
@@ -265,14 +224,14 @@
             <li>Secondary Sales Management</li>
           </ul>
           <h3>Key contributions</h3>
-          <ul class="project-list">
+          <ul class="ticks">
             <li>Developed an integrated ERP platform covering eight major business modules.</li>
             <li>Implemented centralized management of business and operational data.</li>
             <li>Built workflows connecting sales, purchasing, inventory and production.</li>
             <li>Built business management features that support daily operational activities.</li>
           </ul>
           <h3>Technology stack</h3>
-          <ul class="tech-tags">
+          <ul class="tags">
             <li>PHP</li>
             <li>Laravel</li>
             <li>MySQL</li>
@@ -280,10 +239,13 @@
             <li>Bootstrap</li>
           </ul>
         </article>
-        <article class="project" id="primitek-group">
-          <p class="project-meta"><span class="project-num">02</span><span class="work-tag">Manufacturing ERP</span><span class="project-years">2022 – 2024</span></p>
-          <h2>Primitek Group</h2>
-          <dl class="project-facts">
+        <article class="entry" id="primitek-group">
+          <div class="entry-head">
+            <h2>Primitek Group</h2>
+            <p class="entry-years">2022–2024</p>
+          </div>
+          <dl class="fact-list">
+            <div><dt>Type</dt><dd>Manufacturing ERP</dd></div>
             <div><dt>Client</dt><dd>Primitek Group</dd></div>
             <div><dt>Industry</dt><dd>Non-woven bag manufacturing</dd></div>
             <div><dt>My role</dt><dd>Full-stack ERP developer</dd></div>
@@ -292,14 +254,14 @@
           <p>I worked on an ERP solution for Primitek Group, a non-woven bag manufacturing company in Bangladesh.</p>
           <p>It was designed to support manufacturing-related business operations, improve workflow coordination and centralize essential business processes in one integrated ERP environment.</p>
           <h3>Key contributions</h3>
-          <ul class="project-list">
+          <ul class="ticks">
             <li>Developed ERP functionality tailored to non-woven bag manufacturing operations.</li>
             <li>Worked on business process management and operational workflows.</li>
             <li>Implemented application features using Laravel and MySQL.</li>
             <li>Contributed to centralized business data management and system integration.</li>
           </ul>
           <h3>Technology stack</h3>
-          <ul class="tech-tags">
+          <ul class="tags">
             <li>PHP</li>
             <li>Laravel</li>
             <li>MySQL</li>
@@ -307,10 +269,13 @@
             <li>Bootstrap</li>
           </ul>
         </article>
-        <article class="project" id="mep-group">
-          <p class="project-meta"><span class="project-num">03</span><span class="work-tag">ERP Solution Development</span><span class="project-years">2023 – 2024</span></p>
-          <h2>MEP Group</h2>
-          <dl class="project-facts">
+        <article class="entry" id="mep-group">
+          <div class="entry-head">
+            <h2>MEP Group</h2>
+            <p class="entry-years">2023–2024</p>
+          </div>
+          <dl class="fact-list">
+            <div><dt>Type</dt><dd>ERP Solution Development</dd></div>
             <div><dt>Client</dt><dd>MEP Group</dd></div>
             <div><dt>Industry</dt><dd>Business &amp; manufacturing operations</dd></div>
             <div><dt>My role</dt><dd>Full-stack ERP developer</dd></div>
@@ -320,14 +285,14 @@
           <p>I contributed to an ERP solution for MEP Group, focusing on selected business management functions and operational processes.</p>
           <p>The work covered developing and implementing parts of an ERP system that support business activities and improve how operational information is managed.</p>
           <h3>Key contributions</h3>
-          <ul class="project-list">
+          <ul class="ticks">
             <li>Developed selected ERP modules and business functionality.</li>
             <li>Worked on backend logic and database management.</li>
             <li>Implemented application features using Laravel and MySQL.</li>
             <li>Helped improve business workflow management through ERP-based solutions.</li>
           </ul>
           <h3>Technology stack</h3>
-          <ul class="tech-tags">
+          <ul class="tags">
             <li>PHP</li>
             <li>Laravel</li>
             <li>MySQL</li>
@@ -335,10 +300,13 @@
             <li>Bootstrap</li>
           </ul>
         </article>
-        <article class="project" id="techno-pc">
-          <p class="project-meta"><span class="project-num">04</span><span class="work-tag">Manufacturing ERP</span><span class="project-years">2021 – 2022</span></p>
-          <h2>Techno PC</h2>
-          <dl class="project-facts">
+        <article class="entry" id="techno-pc">
+          <div class="entry-head">
+            <h2>Techno PC</h2>
+            <p class="entry-years">2021–2022</p>
+          </div>
+          <dl class="fact-list">
+            <div><dt>Type</dt><dd>Manufacturing ERP</dd></div>
             <div><dt>Client</dt><dd>Techno PC</dd></div>
             <div><dt>Industry</dt><dd>Plastic &amp; bottle manufacturing</dd></div>
             <div><dt>My role</dt><dd>Full-stack ERP developer</dd></div>
@@ -348,14 +316,14 @@
           <p>I worked on an ERP solution for Techno PC, a plastic bottle manufacturing company in Bangladesh.</p>
           <p>The project supported manufacturing-related business operations through ERP software, with an emphasis on business process management and operational data handling.</p>
           <h3>Key contributions</h3>
-          <ul class="project-list">
+          <ul class="ticks">
             <li>Worked on ERP solution development for plastic bottle manufacturing operations.</li>
             <li>Developed application features using PHP and Laravel.</li>
             <li>Worked on MySQL database management and backend business logic.</li>
             <li>Helped digitize manufacturing-related business processes.</li>
           </ul>
           <h3>Technology stack</h3>
-          <ul class="tech-tags">
+          <ul class="tags">
             <li>PHP</li>
             <li>Laravel</li>
             <li>MySQL</li>
@@ -364,10 +332,10 @@
           </ul>
         </article>
 
-        <div class="project expertise" id="technical-expertise">
-          <h2>Technical expertise</h2>
+        <section class="entry" id="technical-expertise">
+          <div class="entry-head"><h2>Technical expertise</h2></div>
           <p>The stack I use across these ERP projects:</p>
-          <ul class="tech-tags">
+          <ul class="tags">
             <li>PHP</li>
             <li>Laravel</li>
             <li>MySQL</li>
@@ -375,21 +343,20 @@
             <li>Bootstrap</li>
             <li>RESTful API</li>
           </ul>
-        </div>
+        </section>
 
-        <div class="projects-cta">
+        <div class="cta">
           <h2>Need an ERP system or a custom module?</h2>
           <p>Tell me about your business process and I'll get back to you.</p>
-          <a class="style_button" href="/#contact"><span>Hire Me</span></a>
-          <a class="projects-back" href="/">← Back to Md Noyon's homepage</a>
+          <a class="btn" href="/#contact">Send me a message</a>
         </div>
       </div>
     </div>
   </main>
 
-  <script src="/js/ajax-jquery.min.js"></script>
-  <script src="/js/bootstrap.min.js"></script>
-  <script type="module" src="/src/projects.ts"></script>
+  <!--@footer-->
+
+  <script type="module" src="/src/main.ts"></script>
 </body>
 
 </html>

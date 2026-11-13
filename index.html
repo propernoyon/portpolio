@@ -130,9 +130,7 @@
   </script>
 
   <meta name="color-scheme" content="light dark" />
-  <meta name="theme-color" content="#ffffff" />
-  <!-- Hero background is the LCP element: fetch it early -->
-  <link rel="preload" as="image" href="/img/hero-background.webp" type="image/webp" fetchpriority="high" />
+  <meta name="theme-color" content="#f4f6f8" />
   <!-- Apply saved / device theme before the page paints (avoids a flash of the wrong colours) -->
   <script>
     (function () {
@@ -142,693 +140,301 @@
       document.documentElement.setAttribute('data-theme', t);
     })();
   </script>
-  <!-- ========== CSS ========== -->
-  <link rel="stylesheet" href="/css/site.css" />
-  <link rel="stylesheet" href="/css/font-awesome.min.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css?family=Lato|Montserrat&amp;display=swap"
-    rel="stylesheet" />
-  <link
-    rel="stylesheet"
-    href="/assets/css/bootstrap.min.css"
-    type="text/css"
-    media="screen" />
-  <link
-    rel="stylesheet"
-    type="text/css"
-    href="/assets/css/animate.css"
-    media="screen" />
   <link rel="icon" href="/img/favicon-32x32.png" type="image/png" sizes="32x32" />
-  <link href="/css/jquerysctipttop.css" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="/css/style.css?v=3" />
-  <link rel="stylesheet" href="/css/theme.css?v=2" />
-  <link rel="stylesheet" href="/css/work.css?v=2" />
-  <link rel="stylesheet" href="/css/service.css" />
-  <link rel="stylesheet" href="/css/navbar.css" />
-</head><!-- end head -->
+  <!-- Styles and fonts are bundled from /src/styles/site.css by Vite (see src/main.ts) -->
+</head>
 
 <body>
-  <!--<div class="se-pre-con"></div>-->
-  <!-- ========== PRELOADER ========== -->
-  <!-- ========== MENUBAR ========== -->
-  <a class="sr-only sr-only-focusable" href="#about">Skip to main content</a>
-  <header class="menubar">
-    <div class="menubar-content">
-      <nav class="navbar navbar-default navbar-fixed-top" aria-label="Primary">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-2 col-sm-2">
-              <div class="site-title">
-                <p class="h3 site-name">MATC</p>
-              </div>
-              <!-- end site-title -->
-            </div>
-            <!-- end col-md-4 -->
-            <div class="navbar-header">
-              <button
-                type="button"
-                class="navbar-toggle collapsed"
-                data-toggle="collapse"
-                data-target="#bs-example-navbar-collapse-1"
-                aria-controls="bs-example-navbar-collapse-1"
-                aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span></button><!-- end button -->
-            </div>
-            <!-- end navbar-header -->
-            <div class="col-md-10 col-sm-10 navbar-style">
-              <div
-                class="collapse navbar-collapse"
-                id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                  <li>
-                    <a href="#home" class="active">Home</a>
-                  </li>
-                  <li>
-                    <a href="#about">About</a>
-                  </li>
-                  <li>
-                    <a href="#service">Service</a>
-                  </li>
-                  <li>
-                    <a href="#work">Work</a>
-                  </li>
-                  <li>
-                    <a href="/projects">Projects</a>
-                  </li>
-                  <li>
-                    <a href="#contact">Contact</a>
-                  </li>
-                </ul>
-                <!-- end nav -->
-              </div>
-              <!-- end collapse navbar-collapse -->
-            </div>
-            <!-- end col-md-8 -->
+  <!--@header home-->
+
+  <main id="main">
+    <!-- ================================ HERO =============================== -->
+    <section class="hero" id="home">
+      <div class="wrap hero-grid">
+        <div class="hero-text">
+          <h1>
+            <span class="hero-name">Md Noyon</span>
+            <span class="visually-hidden"> – </span>
+            <span class="hero-fullname">Toriqul Islam Noyon</span>
+          </h1>
+          <p class="hero-lead">
+            Software engineer. I build the ERP systems manufacturers use every day to run sales, stock,
+            production and accounts.
+          </p>
+          <dl class="hero-facts">
+            <div><dt>Experience</dt><dd>5+ years</dd></div>
+            <div><dt>Works with</dt><dd>PHP, Laravel, MySQL</dd></div>
+            <div><dt>Based in</dt><dd>Feni, Bangladesh and Lisbon, Portugal</dd></div>
+          </dl>
+          <div class="btn-row">
+            <a class="btn" href="#contact">Send me a message</a>
+            <a class="btn btn-quiet" href="/projects">See ERP projects</a>
           </div>
-          <!-- end row -->
-          <button type="button" class="theme-toggle" id="themeToggle" aria-label="Switch to dark theme" title="Switch to dark theme" aria-pressed="false">
-            <i class="fa fa-moon-o theme-icon-moon" aria-hidden="true"></i>
-            <i class="fa fa-sun-o theme-icon-sun" aria-hidden="true"></i>
-          </button>
         </div>
-        <!-- end container-fluid -->
-      </nav>
-      <!-- navbar -->
-    </div>
-    <!-- end menubar-content -->
-  </header>
-  <!-- end menubar -->
-  <main class="main-page-content">
-    <div id="home">
-      <div id="home-parallex" class="section">
-        <div class="home-content-main">
-          <div class="table-cell">
-            <div class="container">
-              <div class="row home-row">
-                <div class="col-md-12 col-sm-12">
-                  <div class="home-text wow fadeInDown text-left">
-                    <p class="h2 hero-title">I Am NOYON</p>
-                    <p class="h3 hero-tagline">Passionate About <span style="color:#f6cd61 ;font-family: cursive;">Code</span></p>
-                    <div class="home-social-icon">
-                      <ul class="home-social">
-                        <li class="wow fadeIn">
-                          <a href="https://www.facebook.com/tisnoyon/" target="_blank" rel="me noopener" aria-label="Md Noyon on Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                        </li>
-                        <li class="wow fadeIn">
-                          <a href="https://x.com/NoyonToriqul" target="_blank" rel="me noopener" aria-label="Md Noyon on X (Twitter)"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                        </li>
-                        <li class="wow fadeIn">
-                          <a href="https://www.pinterest.com/tinoyon/" target="_blank" rel="me noopener" aria-label="Md Noyon on Pinterest"><i
-                              class="fa fa-pinterest-p"
-                              aria-hidden="true"></i></a>
-                        </li>
-                        <li class="wow fadeIn">
-                          <a href="https://www.linkedin.com/in/tisnoyon/" target="_blank" rel="me noopener" aria-label="Md Noyon on LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                        </li>
-                        <li class="wow fadeIn">
-                          <a href="https://github.com/propernoyon" target="_blank" rel="me noopener" aria-label="Md Noyon on GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>
-                        </li>
-                      </ul>
-                    </div>
-                    <!-- end about-social-icon -->
-                  </div>
-                  <!-- end home-text  -->
-                </div>
-                <!-- end col-md-8 -->
-              </div>
-              <!-- end row  -->
-            </div>
-            <!-- end container -->
-          </div>
-          <!-- end table-cell -->
-        </div>
-        <!-- end home-content-main -->
-        <div class="parallax" data-velocity="-.1"></div>
-        <div class="parallax" data-velocity="-.5" data-fit="525"></div>
+        <figure class="hero-photo">
+          <img
+            src="/img/md-noyon-toriqul-islam-noyon-640.webp"
+            srcset="/img/md-noyon-toriqul-islam-noyon-640.webp 640w, /img/toriqul-islam-noyon.webp 1349w"
+            sizes="(min-width: 721px) 340px, 132px"
+            width="640" height="640" fetchpriority="high" decoding="async"
+            alt="Md Noyon (Toriqul Islam Noyon), software engineer" />
+        </figure>
       </div>
-      <!-- end home-parallex  -->
-    </div>
-    <!-- end home  -->
+    </section>
+
+    <!-- ================================ CAREER =============================== -->
+    <section class="career" id="career">
+      <div class="wrap">
+        <div class="career-panel">
+          <h2>My career on one chart</h2>
+          <p>
+            Education first, then four ERP systems for manufacturing businesses. Select a client to read what I built.
+          </p>
+          <!--@career-->
+        </div>
+      </div>
+    </section>
 
     <!-- ================================ ABOUT =============================== -->
-
-    <div id="about">
-      <div class="about-content">
-        <div class="me-grid">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-4 col-sm-12 col-xs-12 about-col">
-                <div class="about-image">
-                  <img style="border-radius:30%"
-                    src="/img/md-noyon-toriqul-islam-noyon-640.webp"
-                    srcset="/img/md-noyon-toriqul-islam-noyon-640.webp 640w, /img/toriqul-islam-noyon.webp 1349w"
-                    sizes="(min-width: 992px) 360px, 92vw"
-                    width="640" height="640" loading="lazy" decoding="async"
-                    alt="Md Noyon (Toriqul Islam Noyon), web developer"
-                    class="about-img wow fadeIn" />
-                </div>
-                <!-- end about-image  -->
-              </div>
-              <!-- end col-md-4  -->
-              <div class="col-md-8 col-sm-12 col-xs-12 about-col">
-                <div class="about-details wow fadeIn">
-                  <h1>Md Noyon – Toriqul Islam Noyon</h1>
-                  <div class="underline"></div>
-                  <p class="wow fadeIn" style="margin-bottom: 2%">
-                     A dedicated and passionate
-                  Laravel developer with over five years of experience in
-                  the software industry. My expertise lies in crafting
-                  robust and efficient ERP solutions that streamline
-                  business processes and enhance operational efficiency.
-                  Throughout my career, I have honed my skills in developing
-                  scalable and high-performance applications, always
-                  striving to deliver top-notch solutions that meet the
-                  unique needs of each client. My journey in software
-                  development is driven by a relentless pursuit of
-                  excellence and a deep commitment to staying at the
-                  forefront of industry trends and technologies. When I'm
-                  not coding, I enjoy exploring new advancements in
-                  technology, contributing to open-source projects, and
-                  continuously expanding my knowledge base. I'm always eager
-                  to take on new challenges and collaborate with like-minded
-                  professionals to create innovative solutions that make a
-                  real impact. Feel free to reach out if you want to discuss
-                  potential collaborations or simply connect. Let's build
-                  something amazing together!
-                  </p>
-                  <p class="wow fadeIn" style="margin-bottom: 2%">
-                    I have built ERP software with ERP.COM.BD and studied at
-                    Feni Government Computer Institute (2015–2019). I am based
-                    in Feni, Bangladesh and Lisbon, Portugal.
-                  </p>
-
-                  <!--<a-->
-                  <!--  class="style_button"-->
-                  <!--  href="#contact"-->
-                  <!--  target="blank"-->
-                  <!--  ><span>Download Resume</span></a>-->
-                  <a class="style_button" href="#contact"><span>Hire Me</span></a>
-                </div>
-                <!-- end about-details  -->
-              </div>
-              <!-- end col-md-8  -->
+    <section class="section" id="about">
+      <div class="wrap">
+        <div class="about-grid">
+          <div data-reveal>
+            <div class="section-head">
+              <h2>About me</h2>
             </div>
-            <!-- end row  -->
+            <p>
+              I'm Toriqul Islam Noyon, known online as Md Noyon. Most of my work is enterprise resource planning
+              software for manufacturing and industrial businesses: one system where a company runs sales,
+              purchasing, stock, production, accounts and HR.
+            </p>
+            <p>
+              Around the core modules I build the parts that make an ERP usable in practice: role-based access
+              for different teams, real-time reports and PDF exports, email notifications, and screens that
+              work on a phone as well as a desktop.
+            </p>
+            <p>
+              I have built ERP software with ERP.COM.BD and studied at Feni Government Computer Institute
+              (2015–2019).
+            </p>
+            <a class="more-link" href="/about">More about me</a>
           </div>
-          <!-- end container  -->
-        </div>
-        <!-- end me-grid  -->
-        <div class="work-counter text-left">
-          <div class="counter">
-            <div class="container">
-              <div class="row">
-                <div class="col-md-3 col-sm-6">
-                  <div class="work-statistics">
-                    <i class="fa fa-cogs stat-icon" aria-hidden="true"></i>
-                    <p class="h3 Count">15</p>
-                    <p>ERP Systems Developed</p>
-                  </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                  <div class="work-statistics">
-                    <i class="fa fa-code stat-icon" aria-hidden="true"></i>
-                    <p class="h3 Count">85</p>
-                    <p>Web Projects Completed</p>
-                  </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                  <div class="work-statistics">
-                    <i class="fa fa-database stat-icon" aria-hidden="true"></i>
-                    <p class="h3 Count">50</p>
-                    <p>Custom Dashboards Created</p>
-                  </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                  <div class="work-statistics">
-                    <i class="fa fa-users stat-icon" aria-hidden="true"></i>
-                    <p class="h3 Count">100</p>
-                    <p>Clients Served</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="about-side" data-reveal style="--d:1">
+            <h3>At a glance</h3>
+            <dl class="fact-list">
+              <div><dt>Role</dt><dd>Software engineer, full-stack ERP developer</dd></div>
+              <div><dt>Focus</dt><dd>ERP systems and custom web applications</dd></div>
+              <div><dt>Industries</dt><dd>Manufacturing and industrial businesses</dd></div>
+              <div><dt>Based in</dt><dd>Feni, Bangladesh and Lisbon, Portugal</dd></div>
+            </dl>
+            <h3>Technology</h3>
+            <ul class="tags">
+              <li>PHP</li>
+              <li>Laravel</li>
+              <li>MySQL</li>
+              <li>JavaScript</li>
+              <li>jQuery</li>
+              <li>AJAX</li>
+              <li>Bootstrap</li>
+              <li>RESTful API</li>
+            </ul>
           </div>
         </div>
 
-        <!-- end work-counter  -->
+        <dl class="numbers" data-reveal>
+          <div><dt>ERP systems developed</dt><dd data-count="15">15</dd></div>
+          <div><dt>Web projects completed</dt><dd data-count="85">85</dd></div>
+          <div><dt>Custom dashboards created</dt><dd data-count="50">50</dd></div>
+          <div><dt>Clients served</dt><dd data-count="100">100</dd></div>
+        </dl>
       </div>
-      <!-- end about-content  -->
-    </div>
-    <!-- end about  -->
+    </section>
 
     <!-- ================================ SERVICE =============================== -->
-
-    <div id="service">
-      <div class="service-content">
-        <div class="service-grid text-left">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12">
-                <div
-                  class="service-title text-left wow fadeIn"
-                  data-wow-delay=".2s">
-                  <h2 class="h3">Service I Provide</h2>
-                  <div class="underline"></div>
-                  <p>
-                    With years of hands-on experience in web development and a strong focus on ERP system development,
-                    I offer a range of services designed to help businesses grow and operate efficiently.
-                    My work combines clean code, smart architecture, and user-friendly design — tailored to your specific needs.
-                    I specialize in creating responsive and dynamic web applications that enhance user experience and drive engagement.
-                    My goal is to deliver solutions that not only meet but exceed client expectations,
-                    ensuring their success in the digital landscape.
-
-                  </p>
-                </div>
-                <!-- end service-title  -->
-              </div>
-              <!-- end col-md-12  -->
-            </div>
-            <!-- end row  -->
-            <div class="row service-row">
-              <!-- Row 1 -->
-              <div class="col-md-6 col-sm-12">
-                <div class="service-details wow fadeIn" data-wow-delay=".2s">
-                  <i class="fa fa-database service-icon" aria-hidden="true"></i>
-                  <h3>ERP System Development</h3>
-                  <div class="underline-black"></div>
-                  <p>
-                    Comprehensive ERP system development using PHP and MySQL — covering core modules like
-                    <strong>Sales, Purchase, Warehouse, Production, Accounts, HR, LC Import, and Vehicle Management.</strong> Each solution is custom-built to streamline business processes and enhance operational efficiency.
-                  </p>
-
-                </div>
-              </div>
-
-              <div class="col-md-6 col-sm-12">
-                <div class="service-details wow fadeIn" data-wow-delay=".4s">
-                  <i class="fa fa-code service-icon" aria-hidden="true"></i>
-                  <h3>Custom Web Applications</h3>
-                  <div class="underline-black"></div>
-                  <p>
-                    Fully functional and responsive web apps built with clean PHP, JavaScript, and jQuery — from admin panels to dynamic forms and dashboards.
-                  </p>
-                </div>
-              </div>
-
-              <div class="col-md-6 col-sm-12">
-                <div class="service-details wow fadeIn" data-wow-delay=".6s">
-                  <i class="fa fa-bar-chart service-icon" aria-hidden="true"></i>
-                  <h3>Reporting &amp; PDF Export</h3>
-                  <div class="underline-black"></div>
-                  <p>
-                    Create real-time reports, dynamic charts, and PDF exports directly from your web system, ideal for invoices, admin summaries, and audit trails.
-                  </p>
-                </div>
-              </div>
-
-              <!-- Row 2 -->
-              <div class="col-md-6 col-sm-12">
-                <div class="service-details wow fadeIn" data-wow-delay=".2s">
-                  <i class="fa fa-lock service-icon" aria-hidden="true"></i>
-                  <h3>Secure Login Systems</h3>
-                  <div class="underline-black"></div>
-                  <p>
-                    Custom login/logout, session management, and access control using secure PHP practices — ensuring safe user authentication and role-based access.
-                  </p>
-                </div>
-              </div>
-
-              <div class="col-md-6 col-sm-12">
-                <div class="service-details wow fadeIn" data-wow-delay=".4s">
-                  <i class="fa fa-envelope service-icon" aria-hidden="true"></i>
-                  <h3>Email Integration</h3>
-                  <div class="underline-black"></div>
-                  <p>
-                    Integrated contact forms, notification systems, and Gmail-based mailing using PHPMailer — fully automated and styled for business workflows.
-                  </p>
-                </div>
-              </div>
-
-              <div class="col-md-6 col-sm-12">
-                <div class="service-details wow fadeIn" data-wow-delay=".6s">
-                  <i class="fa fa-refresh service-icon" aria-hidden="true"></i>
-                  <h3>AJAX &amp; jQuery Enhancements</h3>
-                  <div class="underline-black"></div>
-                  <p>
-                    Make your web application dynamic and responsive with AJAX calls, modals, real-time updates, and jQuery UI components for better UX.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-
-            <!-- end row  -->
-          </div>
-          <!-- end container  -->
+    <section class="section" id="service">
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <h2>Services I provide</h2>
+          <p>From a complete ERP platform to a single feature added to a PHP application you already run.</p>
         </div>
-        <!-- end service-grid  -->
+
+        <div class="service-lead" data-reveal>
+          <div>
+            <h3>ERP system development</h3>
+            <p>
+              Custom ERP systems built with PHP, Laravel and MySQL. Each one is built around how the business
+              actually works, to streamline its processes and keep operational data in one place.
+            </p>
+          </div>
+          <div>
+            <h4>Modules I build</h4>
+            <ul class="tags">
+              <li>Sales</li>
+              <li>Purchase</li>
+              <li>Warehouse</li>
+              <li>Production</li>
+              <li>Accounts</li>
+              <li>HR</li>
+              <li>LC Import</li>
+              <li>Vehicle Management</li>
+            </ul>
+          </div>
+        </div>
+
+        <ul class="service-list">
+          <li data-reveal>
+            <h3>Custom web applications</h3>
+            <p>Fully functional, responsive web apps built with clean PHP, JavaScript and jQuery, from admin panels to dynamic forms and dashboards.</p>
+          </li>
+          <li data-reveal style="--d:1">
+            <h3>Reporting &amp; PDF export</h3>
+            <p>Real-time reports, dynamic charts and PDF exports straight from your web system. Useful for invoices, admin summaries and audit trails.</p>
+          </li>
+          <li data-reveal style="--d:2">
+            <h3>Secure login systems</h3>
+            <p>Custom login and logout, session management and role-based access control using secure PHP practices.</p>
+          </li>
+          <li data-reveal>
+            <h3>Email integration</h3>
+            <p>Contact forms, notification systems and Gmail-based mailing with PHPMailer, automated to fit business workflows.</p>
+          </li>
+          <li data-reveal style="--d:1">
+            <h3>AJAX &amp; jQuery enhancements</h3>
+            <p>AJAX calls, modals, real-time updates and jQuery UI components that make a web application faster and easier to use.</p>
+          </li>
+        </ul>
+        <a class="more-link" href="/services">All services in detail</a>
       </div>
-      <!-- end service-content  -->
-    </div>
-    <!-- end service  -->
+    </section>
 
     <!-- ================================ WORK =============================== -->
-
-    <div id="work">
-      <div class="work-content">
-        <div class="work-grid">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12">
-                <div class="work-title text-left wow fadeIn">
-                  <h2 class="h3">Work I Have Done</h2>
-                  <div class="underline"></div>
-                  <p>
-                    Recent client work includes manufacturing ERP systems for Starline Group, Primitek Group,
-                    MEP Group and Techno PC.
-                    <a href="/projects">See the ERP project case studies</a>.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="work-details">
-            <div class="container">
-              <ul id="filters" class="clearfix">
-                <li><span class="filter active" data-filter="all">All</span></li>
-                <li><span class="filter" data-filter=".system">ERP / System</span></li>
-                <li><span class="filter" data-filter=".development">Development</span></li>
-                <li><span class="filter" data-filter=".web">Web Design</span></li>
-              </ul>
-
-              <div class="row" id="portfoliolist">
-                  
-                   <div class="portfolio system col-sm-12 col-md-4" data-cat="system">
-                  <div class="portfolio-wrapper ">
-                    <div class="text-box">
-                      <span class="work-tag"><i class="fa fa-cubes" aria-hidden="true"></i>ERP / System</span>
-                      <h3 class="h4">Inventory &amp; Purchase Control System</h3>
-                      <p>Built inventory and purchasing system with low stock alerts, supplier tracking, and smart purchase requisition workflows.</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="portfolio system col-sm-12 col-md-4" data-cat="system">
-                  <div class="portfolio-wrapper">
-                    <div class="text-box">
-                      <span class="work-tag"><i class="fa fa-cubes" aria-hidden="true"></i>ERP / System</span>
-                      <h3 class="h4">Multi-User Role &amp; Access Management</h3>
-                      <p>Implemented a role-based access system with custom permissions for admin, sales, warehouse, and account users.</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="portfolio system col-sm-12 col-md-4" data-cat="system">
-                  <div class="portfolio-wrapper">
-                    <div class="text-box">
-                      <span class="work-tag"><i class="fa fa-cubes" aria-hidden="true"></i>ERP / System</span>
-                      <h3 class="h4">Sales and Billing Automation</h3>
-                      <p>Automated invoice generation, payment recording, and VAT calculation in a responsive PHP-based billing system.</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="portfolio web col-sm-12 col-md-4" data-cat="web">
-                  <div class="portfolio-wrapper">
-                    <div class="text-box">
-                      <span class="work-tag"><i class="fa fa-desktop" aria-hidden="true"></i>Web Design</span>
-                      <h3 class="h4">Customer Transaction Report with AJAX</h3>
-                      <p>Built a dynamic customer report with AJAX-loaded modals and tooltips for transaction remarks and quick insights.</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="portfolio web col-sm-12 col-md-4" data-cat="web">
-                  <div class="portfolio-wrapper">
-                    <div class="text-box">
-                      <span class="work-tag"><i class="fa fa-desktop" aria-hidden="true"></i>Web Design</span>
-                      <h3 class="h4">Sales Entry &amp; Print System</h3>
-                      <p>Designed a mobile-optimized POS that prints invoices and automatically returns to the sales screen after printing.</p>
-                    </div>
-                  </div>
-                </div>
-                  <div class="portfolio development col-sm-12 col-md-4" data-cat="development">
-                  <div class="portfolio-wrapper ">
-                    <div class="text-box">
-                      <span class="work-tag"><i class="fa fa-code" aria-hidden="true"></i>Development</span>
-                      <h3 class="h4">PDF Report with PHPMailer</h3>
-                      <p>Built a PHP 8.2 system that creates PDF reports and sends them via Gmail using PHPMailer SMTP.</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="portfolio development col-sm-12 col-md-4" data-cat="development">
-                  <div class="portfolio-wrapper">
-                    <div class="text-box">
-                      <span class="work-tag"><i class="fa fa-code" aria-hidden="true"></i>Development</span>
-                      <h3 class="h4">QR Code Integration</h3>
-                      <p>Created a feature to generate QR codes and embed them into user profiles and printable invoice documents.</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="portfolio development col-sm-12 col-md-4" data-cat="development">
-                  <div class="portfolio-wrapper">
-                    <div class="text-box">
-                      <span class="work-tag"><i class="fa fa-code" aria-hidden="true"></i>Development</span>
-                      <h3 class="h4">Session &amp; Cookie Based Login System</h3>
-                      <p>Developed a secure login system using PHP sessions, cookies, and a custom session save path for security.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- end portfoliolist -->
-            </div>
-          </div>
+    <section class="section" id="work">
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <h2>Work I have done</h2>
+          <p>
+            Features and systems I have built. For full client work, including Starline Group, Primitek Group,
+            MEP Group and Techno PC, <a href="/projects">see the ERP project case studies</a>.
+          </p>
         </div>
+
+        <div class="filters" role="group" aria-label="Filter work by type">
+          <button type="button" class="filter" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="filter" data-filter="system" aria-pressed="false">ERP / System</button>
+          <button type="button" class="filter" data-filter="development" aria-pressed="false">Development</button>
+          <button type="button" class="filter" data-filter="web" aria-pressed="false">Web Design</button>
+        </div>
+
+        <ul class="work-list" id="portfoliolist">
+          <li class="work-item" data-cat="system">
+            <span class="work-cat">ERP / System</span>
+            <h3>Inventory &amp; Purchase Control System</h3>
+            <p>Built inventory and purchasing system with low stock alerts, supplier tracking, and smart purchase requisition workflows.</p>
+          </li>
+          <li class="work-item" data-cat="system">
+            <span class="work-cat">ERP / System</span>
+            <h3>Multi-User Role &amp; Access Management</h3>
+            <p>Implemented a role-based access system with custom permissions for admin, sales, warehouse, and account users.</p>
+          </li>
+          <li class="work-item" data-cat="system">
+            <span class="work-cat">ERP / System</span>
+            <h3>Sales and Billing Automation</h3>
+            <p>Automated invoice generation, payment recording, and VAT calculation in a responsive PHP-based billing system.</p>
+          </li>
+          <li class="work-item" data-cat="web">
+            <span class="work-cat">Web Design</span>
+            <h3>Customer Transaction Report with AJAX</h3>
+            <p>Built a dynamic customer report with AJAX-loaded modals and tooltips for transaction remarks and quick insights.</p>
+          </li>
+          <li class="work-item" data-cat="web">
+            <span class="work-cat">Web Design</span>
+            <h3>Sales Entry &amp; Print System</h3>
+            <p>Designed a mobile-optimized POS that prints invoices and automatically returns to the sales screen after printing.</p>
+          </li>
+          <li class="work-item" data-cat="development">
+            <span class="work-cat">Development</span>
+            <h3>PDF Report with PHPMailer</h3>
+            <p>Built a PHP 8.2 system that creates PDF reports and sends them via Gmail using PHPMailer SMTP.</p>
+          </li>
+          <li class="work-item" data-cat="development">
+            <span class="work-cat">Development</span>
+            <h3>QR Code Integration</h3>
+            <p>Created a feature to generate QR codes and embed them into user profiles and printable invoice documents.</p>
+          </li>
+          <li class="work-item" data-cat="development">
+            <span class="work-cat">Development</span>
+            <h3>Session &amp; Cookie Based Login System</h3>
+            <p>Developed a secure login system using PHP sessions, cookies, and a custom session save path for security.</p>
+          </li>
+        </ul>
       </div>
-    </div>
-
-    <!-- end work  -->
-
-
+    </section>
 
     <!-- ================================ CONTACT =============================== -->
-
-    <div id="contact">
-      <div class="contact-content">
-        <div class="contact-grid">
-          <div class="contact-form-details wow fadeIn">
-            <div class="container">
-              <div class="row">
-                <div class="col-md-12">
-                  <div class="contact-title text-left wow fadeIn">
-                    <h2 class="h3">CONTACT NOW !</h2>
-                    <div class="underline"></div>
-                    <p>
-                      Looking for a reliable backend developer with real-world experience in ERP systems, PHP, MySQL, and secure web application architecture?
-                      Whether you need a custom system, automation solution, or performance-optimized backend, I’m ready to help you build it.
-                      Let’s connect and bring your ideas to life.
-                    </p>
-                  </div>
-                  <!-- end contact-title -->
-                </div>
-                <!-- end col-md-12  -->
-              </div>
-              <!-- end row  -->
-              <div class="row">
-                <div class="col-md-8 wow fadeIn">
-                  <div class="contact-form">
-                    <form
-                      id="contactForm"
-                      class="contact-form shake"
-                      data-toggle="validator" autocomplete="off">
-                      <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" />
-                      <div class="form-group">
-                        <div class="controls">
-                          <input
-                            type="text"
-                            id="name"
-                            class="form-control"
-                            placeholder="Name"
-                            aria-label="Name"
-                            autocomplete="name"
-                            required
-                            data-error="Please enter your name" />
-                          <div class="help-block with-errors"></div>
-                        </div>
-                        <!-- end controls -->
-                      </div>
-                      <!-- end form-group -->
-                      <div class="form-group">
-                        <div class="controls">
-                          <input
-                            type="email"
-                            class="email form-control"
-                            id="email"
-                            placeholder="Email"
-                            aria-label="Email"
-                            autocomplete="email"
-                            required
-                            data-error="Please enter your email" />
-                          <div class="help-block with-errors"></div>
-                        </div>
-                        <!-- end controls -->
-                      </div>
-                      <!-- end form-group -->
-                      <div class="form-group">
-                        <div class="controls">
-                          <input
-                            type="text"
-                            id="msg_subject"
-                            class="form-control"
-                            placeholder="Subject"
-                            aria-label="Subject"
-                            required
-                            data-error="Please enter your message subject" />
-                          <div class="help-block with-errors"></div>
-                        </div>
-                        <!-- end controls -->
-                      </div>
-                      <!-- end form-group -->
-                      <div class="form-group">
-                        <div class="controls">
-                          <textarea
-                            id="message"
-                            rows="7"
-                            placeholder="Message"
-                            aria-label="Message"
-                            class="form-control"
-                            required
-                            data-error="Write your message"></textarea>
-                          <div class="help-block with-errors"></div>
-                        </div>
-                        <!-- end controls -->
-                      </div>
-                      <!-- end form-group -->
-                      <button
-                        type="submit"
-                        id="submit"
-                        class="btn btn-success">
-                        Send Message
-                      </button>
-                       <!-- Loading spinner (hidden by default) -->
-                    <div id="formLoading" class="spinner" style="display:none;"></div>
-
-
-                      <div id="msgSubmit" class="h3 text-center hidden"></div>
-                      <div class="clearfix"></div>
-                    </form>
-                  </div>
-                  <!-- end contact-form -->
-                </div>
-                <!-- end col-md-8 -->
-                <div class="col-md-4 wow fadeIn">
-                  <div class="contact-col" data-wow-delay=".2s">
-                    <i
-                      class="fa fa-map-marker contact-icon"
-                      aria-hidden="true"></i>
-                    <h3>Address</h3>
-                    <p>Feni, Bangladesh<br />Lisbon, Portugal</p>
-                  </div>
-                  <!-- end contact-col  -->
-                  <div class="contact-col" data-wow-delay=".4s">
-                    <i
-                      class="fa fa-envelope contact-icon"
-                      aria-hidden="true"></i>
-                    <h3>Email</h3>
-                    <a href="mailto:mdtoriqul89@gmail.com"><p>mdtoriqul89@gmail.com</p></a>
-                    
-
-                  </div>
-                  <!-- end contact-col  -->
-                  <div class="contact-col" data-wow-delay=".6s">
-                    <i class="fa fa-whatsapp contact-icon" aria-hidden="true"></i>
-                    <h3>WhatsApp</h3>
-                    <a href="https://wa.me/8801845322809" target="_blank" rel="noopener"><p>Chat on WhatsApp</p></a>
-
-                  </div>
-                  <!-- end contact-col  -->
-                  <!-- end contact-col  -->
-                  <div class="contact-col" data-wow-delay=".6s">
-                    <i
-                      class="fa fa-mobile contact-icon"
-                      aria-hidden="true"></i>
-                    <h3>Phone</h3>
-                    <a href="tel:+8801845322809"><p>+8801845322809</p></a>
-                  </div>
-                  <!-- end contact-col  -->
-                </div>
-                <!-- end col-md-4  -->
-              </div>
-              <!-- end row -->
-            </div>
-            <!-- end container -->
-          </div>
-          <!-- end copyright-details -->
+    <section class="section" id="contact">
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <h2>Contact me</h2>
+          <p>
+            Need a custom ERP system, an automation, or a faster and more secure backend? Tell me about it
+            and I will reply by email.
+          </p>
         </div>
-        <!-- end contact-grid -->
+
+        <div class="contact-grid">
+          <form id="contactForm" class="form" novalidate data-reveal>
+            <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            <div class="field">
+              <label for="name">Name</label>
+              <input type="text" id="name" autocomplete="name" required data-field aria-describedby="name-error" />
+              <span class="field-error" id="name-error"></span>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" autocomplete="email" required data-field aria-describedby="email-error" />
+              <span class="field-error" id="email-error"></span>
+            </div>
+            <div class="field field-wide">
+              <label for="msg_subject">Subject</label>
+              <input type="text" id="msg_subject" required data-field aria-describedby="msg_subject-error" />
+              <span class="field-error" id="msg_subject-error"></span>
+            </div>
+            <div class="field field-wide">
+              <label for="message">Message</label>
+              <textarea id="message" rows="6" required data-field aria-describedby="message-error"></textarea>
+              <span class="field-error" id="message-error"></span>
+            </div>
+            <div class="form-foot">
+              <button type="submit" id="submit" class="btn">Send message</button>
+              <p id="msgSubmit" class="form-status" role="status" aria-live="polite"></p>
+            </div>
+          </form>
+
+          <ul class="contact-ways" data-reveal style="--d:1">
+            <li>
+              <h3>Email</h3>
+              <a href="mailto:mdtoriqul89@gmail.com">mdtoriqul89@gmail.com</a>
+            </li>
+            <li>
+              <h3>WhatsApp</h3>
+              <a href="https://wa.me/8801845322809" target="_blank" rel="noopener">Chat on WhatsApp</a>
+            </li>
+            <li>
+              <h3>Phone</h3>
+              <a href="tel:+8801845322809">+8801845322809</a>
+            </li>
+            <li>
+              <h3>Address</h3>
+              <p>Feni, Bangladesh<br />Lisbon, Portugal</p>
+            </li>
+          </ul>
+        </div>
       </div>
-      <!-- end contact-content -->
-    </div>
-    <!-- end contact -->
+    </section>
   </main>
-  <!-- end main-page -->
 
-  <!-- ================================ JQUERY =============================== -->
+  <!--@footer-->
 
-  <script src="/js/ajax-jquery.min.js"></script>
-  <script src="/js/bootstrap.min.js"></script>
-  <script src="/js/wow.js"></script>
-  <script
-    type="text/javascript"
-    src="/assets/js/form-validator.min.js"></script>
-  <script src="/js/jquery.scrolly.js"></script>
-   <script
-    type="text/javascript"
-    src="/js/jquery.fancybox8cbb.js?v=2.1.5"></script>
-  <script
-    type="text/javascript"
-    src="/js/jquery.fancybox-buttons3447.js?v=1.0.5"></script>
-  <script
-    type="text/javascript"
-    src="/js/jquery.fancybox-thumbsf2ad.js?v=1.0.7"></script>
-  <script
-    type="text/javascript"
-    src="/js/jquery.fancybox-mediac924.js?v=1.0.6"></script>
-  
-  <script type="text/javascript" src="/js/jquery.mixitup.min.js"></script>
-  <script src="/js/jquery.counterup.min.js"></script>
-  <script src="/js/jquery.ripples-min.js"></script>
-
-
-
-  <!-- Site scripts (TypeScript, bundled by Vite) -->
   <script type="module" src="/src/main.ts"></script>
 </body>
 

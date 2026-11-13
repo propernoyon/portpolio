@@ -171,7 +171,7 @@
   </script>
 
   <meta name="color-scheme" content="light dark" />
-  <meta name="theme-color" content="#ffffff" />
+  <meta name="theme-color" content="#f4f6f8" />
   <script>
     (function () {
       var t;
@@ -180,63 +180,16 @@
       document.documentElement.setAttribute('data-theme', t);
     })();
   </script>
-  <link rel="stylesheet" href="/css/font-awesome.min.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat&amp;display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/assets/css/bootstrap.min.css" type="text/css" media="screen" />
   <link rel="icon" href="/img/favicon-32x32.png" type="image/png" sizes="32x32" />
-  <link rel="stylesheet" href="/css/style.css?v=3" />
-  <link rel="stylesheet" href="/css/theme.css?v=2" />
-  <link rel="stylesheet" href="/css/work.css?v=2" />
-  <link rel="stylesheet" href="/css/navbar.css" />
-  <link rel="stylesheet" href="/css/projects.css?v=2" />
+  <!-- Styles and fonts are bundled from /src/styles/site.css by Vite (see src/main.ts) -->
 </head>
 
-<body class="projects-body">
-  <a class="sr-only sr-only-focusable" href="#main">Skip to main content</a>
-  <header class="menubar">
-    <div class="menubar-content">
-      <nav class="navbar navbar-default navbar-fixed-top small" aria-label="Primary">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-2 col-sm-2">
-              <div class="site-title">
-                <p class="h3 site-name"><a href="/" aria-label="Md Noyon – home">MATC</a></p>
-              </div>
-            </div>
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-                aria-controls="bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span></button>
-            </div>
-            <div class="col-md-10 col-sm-10 navbar-style">
-              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                  <li><a href="/">Home</a></li>
-                  <li><a href="/about">About</a></li>
-                  <li class="active"><a href="/services" aria-current="page">Services</a></li>
-                  <li><a href="/projects">Projects</a></li>
-                  <li><a href="/#contact">Contact</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <button type="button" class="theme-toggle" id="themeToggle" aria-label="Switch to dark theme" title="Switch to dark theme" aria-pressed="false">
-            <i class="fa fa-moon-o theme-icon-moon" aria-hidden="true"></i>
-            <i class="fa fa-sun-o theme-icon-sun" aria-hidden="true"></i>
-          </button>
-        </div>
-      </nav>
-    </div>
-  </header>
+<body>
+  <!--@header services-->
 
-  <main class="projects-page" id="main">
-    <div class="projects-hero">
-      <div class="container">
+  <main id="main">
+    <section class="page-hero">
+      <div class="wrap">
         <nav aria-label="Breadcrumb">
           <ol class="crumbs">
             <li><a href="/">Home</a></li>
@@ -244,30 +197,32 @@
           </ol>
         </nav>
         <h1>ERP &amp; Web Development Services</h1>
-        <div class="underline"></div>
-        <p class="projects-intro">
+        <p class="page-intro">
           I'm Md Noyon (Toriqul Islam Noyon), a software engineer focused on ERP systems. These are the services
           I provide, from complete ERP platforms to single features added to an existing PHP application.
         </p>
-        <ul class="project-cards service-cards">
-          <li><a href="#erp-system-development"><strong>ERP System Development</strong></a></li>
-          <li><a href="#custom-web-applications"><strong>Custom Web Applications</strong></a></li>
-          <li><a href="#reporting-pdf-export"><strong>Reporting &amp; PDF Export</strong></a></li>
-          <li><a href="#secure-login-systems"><strong>Secure Login Systems</strong></a></li>
-          <li><a href="#email-integration"><strong>Email Integration</strong></a></li>
-          <li><a href="#ajax-jquery-enhancements"><strong>AJAX &amp; jQuery Enhancements</strong></a></li>
-        </ul>
       </div>
-    </div>
+    </section>
 
-    <div id="work" class="projects-detail">
-      <div class="container">
-        <article class="project" id="erp-system-development">
-          <p class="project-meta"><span class="project-num">01</span></p>
-          <h2>ERP System Development</h2>
+    <div class="wrap doc">
+      <nav class="doc-index" aria-label="Services">
+        <h2>Services</h2>
+        <ul>
+          <li><a href="#erp-system-development">ERP System Development</a></li>
+          <li><a href="#custom-web-applications">Custom Web Applications</a></li>
+          <li><a href="#reporting-pdf-export">Reporting &amp; PDF Export</a></li>
+          <li><a href="#secure-login-systems">Secure Login Systems</a></li>
+          <li><a href="#email-integration">Email Integration</a></li>
+          <li><a href="#ajax-jquery-enhancements">AJAX &amp; jQuery Enhancements</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <article class="entry" id="erp-system-development">
+          <div class="entry-head"><h2>ERP System Development</h2></div>
           <p>Custom ERP systems built with PHP, Laravel and MySQL. Each one is built around how the business actually works, to streamline its processes and keep operational data in one place.</p>
           <h3>Modules I build</h3>
-          <ul class="project-modules">
+          <ul class="ticks cols-2">
             <li>Sales</li>
             <li>Purchase</li>
             <li>Warehouse &amp; Inventory</li>
@@ -279,37 +234,32 @@
             <li>LC Import</li>
             <li>Vehicle Management</li>
           </ul>
-          <p class="project-more">See these modules in real client work on the <a href="/projects">ERP projects page</a>.</p>
+          <p class="entry-note">See these modules in real client work on the <a href="/projects">ERP projects page</a>.</p>
         </article>
-        <article class="project" id="custom-web-applications">
-          <p class="project-meta"><span class="project-num">02</span></p>
-          <h2>Custom Web Applications</h2>
+        <article class="entry" id="custom-web-applications">
+          <div class="entry-head"><h2>Custom Web Applications</h2></div>
           <p>Fully functional, responsive web applications built with clean PHP, JavaScript and jQuery, from admin panels to dynamic forms and dashboards.</p>
         </article>
-        <article class="project" id="reporting-pdf-export">
-          <p class="project-meta"><span class="project-num">03</span></p>
-          <h2>Reporting &amp; PDF Export</h2>
+        <article class="entry" id="reporting-pdf-export">
+          <div class="entry-head"><h2>Reporting &amp; PDF Export</h2></div>
           <p>Real-time reports, dynamic charts and PDF exports generated directly from your web system. Useful for invoices, admin summaries and audit trails.</p>
         </article>
-        <article class="project" id="secure-login-systems">
-          <p class="project-meta"><span class="project-num">04</span></p>
-          <h2>Secure Login Systems</h2>
+        <article class="entry" id="secure-login-systems">
+          <div class="entry-head"><h2>Secure Login Systems</h2></div>
           <p>Custom login and logout, session management and role-based access control using secure PHP practices, so each user only sees what their role allows.</p>
         </article>
-        <article class="project" id="email-integration">
-          <p class="project-meta"><span class="project-num">05</span></p>
-          <h2>Email Integration</h2>
+        <article class="entry" id="email-integration">
+          <div class="entry-head"><h2>Email Integration</h2></div>
           <p>Contact forms, notification systems and Gmail-based mailing with PHPMailer, automated and styled to fit business workflows.</p>
         </article>
-        <article class="project" id="ajax-jquery-enhancements">
-          <p class="project-meta"><span class="project-num">06</span></p>
-          <h2>AJAX &amp; jQuery Enhancements</h2>
+        <article class="entry" id="ajax-jquery-enhancements">
+          <div class="entry-head"><h2>AJAX &amp; jQuery Enhancements</h2></div>
           <p>AJAX calls, modals, real-time updates and jQuery UI components that make an existing web application faster and easier to use.</p>
         </article>
 
-        <div class="project">
-          <h2>Technology I work with</h2>
-          <ul class="tech-tags">
+        <section class="entry">
+          <div class="entry-head"><h2>Technology I work with</h2></div>
+          <ul class="tags">
             <li>PHP</li>
             <li>Laravel</li>
             <li>MySQL</li>
@@ -320,34 +270,21 @@
             <li>PHPMailer</li>
             <li>RESTful API</li>
           </ul>
-          <p class="project-more">Read more <a href="/about">about me</a> or see <a href="/projects">selected ERP projects</a>.</p>
-        </div>
+          <p class="entry-note">Read more <a href="/about">about me</a> or see <a href="/projects">selected ERP projects</a>.</p>
+        </section>
 
-        <div class="projects-cta">
+        <div class="cta">
           <h2>Need one of these services?</h2>
           <p>Tell me about your business process and I'll get back to you.</p>
-          <a class="style_button" href="/#contact"><span>Hire Me</span></a>
+          <a class="btn" href="/#contact">Send me a message</a>
         </div>
       </div>
     </div>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <ul class="footer-links">
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/services">Services</a></li>
-        <li><a href="/projects">Projects</a></li>
-        <li><a href="/#contact">Contact</a></li>
-      </ul>
-      <p>© 2026 Md Noyon (Toriqul Islam Noyon)</p>
-    </div>
-  </footer>
+  <!--@footer-->
 
-  <script src="/js/ajax-jquery.min.js"></script>
-  <script src="/js/bootstrap.min.js"></script>
-  <script type="module" src="/src/projects.ts"></script>
+  <script type="module" src="/src/main.ts"></script>
 </body>
 
 </html>

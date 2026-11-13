@@ -6,7 +6,7 @@
 export type Theme = 'light' | 'dark';
 
 const STORAGE_KEY = 'theme';
-const META_COLORS: Record<Theme, string> = { light: '#ffffff', dark: '#0c1416' };
+const META_COLORS: Record<Theme, string> = { light: '#f4f6f8', dark: '#0c151d' };
 
 const root = document.documentElement;
 const systemDark = window.matchMedia('(prefers-color-scheme: dark)');
