@@ -93,7 +93,8 @@
     background: var(--accent-soft);
     border-radius: 20px;
 }
-#work .text-box h4 {
+#work .text-box h4,
+#work .text-box h3 {
     margin: 0 0 10px;
     font-family: 'Montserrat', sans-serif;
     font-size: 17px;

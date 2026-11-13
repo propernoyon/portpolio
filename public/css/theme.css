@@ -99,8 +99,11 @@ a:focus {
 
 /* ---------- Section titles & underline ---------- */
 .service-title h3,
+.service-title h2,
 .work-title h3,
+.work-title h2,
 .contact-title h3,
+.contact-title h2,
 .about-details h2 {
     color: var(--accent-strong);
 }
@@ -126,7 +129,8 @@ a:focus {
 .navbar-default .navbar-nav > .active > a:hover {
     color: var(--accent-strong) !important;
 }
-.navbar-default.small .site-title h3 {
+.navbar-default.small .site-title h3,
+.navbar-default.small .site-title .site-name {
     color: var(--accent-strong);
 }
 
@@ -231,7 +235,8 @@ a:focus {
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
 }
-.work-statistics h3 {
+.work-statistics h3,
+.work-statistics .Count {
     color: var(--heading);
 }
 .work-statistics p {

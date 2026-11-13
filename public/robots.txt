@@ -1,4 +1,5 @@
 User-agent: *
-Disallow: /private/
 Allow: /
-Sitemap: https://www.mdnoyon.com/sitemap.xml
+Disallow: /api/
+
+Sitemap: https://mdnoyon.com/sitemap.xml

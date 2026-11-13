@@ -165,7 +165,8 @@ body{
     padding: 0px 0px;
 
 }
-.site-title h3 {
+.site-title h3,
+.site-title .site-name {
     font-family: 'Montserrat', sans-serif;
     font-size: 27px;
     text-transform: uppercase;
@@ -173,7 +174,8 @@ body{
     font-weight: 600;
     margin-top: 24px;
 }
-.navbar-default.small .site-title h3{
+.navbar-default.small .site-title h3,
+.navbar-default.small .site-title .site-name{
     color: #1bb1a1;
 }
 
@@ -227,7 +229,8 @@ body{
 .home-text{
     width: 100%; 
 }
-.home-text h2 {
+.home-text h2,
+.home-text .hero-title {
     font-size: 23px;
     color: white;
     font-family: 'Montserrat', sans-serif;
@@ -239,7 +242,8 @@ body{
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 2px;
 }
-.home-text h3 {
+.home-text h3,
+.home-text .hero-tagline {
     font-size: 38px;
     text-transform: uppercase;
     color: white;
@@ -291,7 +295,7 @@ body{
     height: 100vh;
 }
 #home-parallex {
-    background: url(../img/img1.jpg) 50% 0 no-repeat fixed;
+    background: url(../img/hero-background.webp) 50% 0 no-repeat fixed;
     margin: 0;
     height: 100%;
     position: relative;
@@ -333,7 +337,7 @@ body{
 section:nth-of-type(2){background:black;height:1600px;}
 
 #home-parallex{
-    background: url(../img/img1.jpg) 50% 0 no-repeat fixed;
+    background: url(../img/hero-background.webp) 50% 0 no-repeat fixed;
     margin: 0;
     height: 100vh;
     position:absolute;
@@ -472,7 +476,8 @@ section:nth-of-type(2){background:black;height:1600px;}
 .work-statistics {
     padding: 0px;
 }
-.work-statistics h3 {
+.work-statistics h3,
+.work-statistics .Count {
     font-size: 29px;
     font-family: 'Montserrat', sans-serif;
     color: #505050;
@@ -532,7 +537,8 @@ section:nth-of-type(2){background:black;height:1600px;}
 .service-title {
     padding-top: 0px;
 }
-.service-title h3{
+.service-title h3,
+.service-title h2{
     font-size: 28px;
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 2px;
@@ -629,7 +635,8 @@ section:nth-of-type(2){background:black;height:1600px;}
 .work-title {
     padding-top: 120px;
 }
-.work-title h3{
+.work-title h3,
+.work-title h2{
     font-size: 28px;
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 2px;
@@ -1363,7 +1370,8 @@ blockquote {
 .contact-title {
     padding-top: 0px;
 }
-.contact-title h3{
+.contact-title h3,
+.contact-title h2{
     font-size: 28px;
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 2px;
@@ -1688,7 +1696,8 @@ blockquote {
 
     }
 
-    .home-text h3 {
+    .home-text h3,
+    .home-text .hero-tagline {
         font-size: 29px;
         text-transform: uppercase;
         color: white;

@@ -25,7 +25,7 @@ export function initSite(): void {
 
   /* ============================= Smooth scroll ============================== */
   $(() => {
-    $('.navbar-default a, a.smooth-scroll').on('click', function (event) {
+    $('.navbar-default a[href^="#"], a.smooth-scroll[href^="#"]').on('click', function (event) {
       const $anchor = $(this);
       $('html, body')
         .stop()
